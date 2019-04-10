@@ -10,7 +10,7 @@ function MovieTicket(movieName, movieTime, personAge) {
 }
 
 MovieTicket.prototype.ticketInfo = function() {
-  return "You have purchased a ticket for " + this.movieName + " at " + this.movieTime + "for" + this.ticket + "."//Your movie ticket will cost $" + this.moviePrice + ".";
+  return "You have purchased a ticket for " + this.movieName + " at " + this.movieTime + " for $" + this.ticket + "."//Your movie ticket will cost $" + this.moviePrice + ".";
 }
 
 // Movie ticket price functions for movie name
@@ -57,9 +57,10 @@ $(document).ready(function() {
     var personAge = $("#personAge").val();
     var movieTicket = new MovieTicket(movieName, movieTime, personAge);
     $(".results").show();
-    $(".name").text(movieName);
-    $(".time").text(movieTime);
-    $(".price").text(movieTicket.ticket);
+    //$(".name").text(movieName);
+    //$(".time").text(movieTime);
+    //$(".price").text(movieTicket.ticket);
+    $(".price").text(movieTicket.ticketInfo());
     console.log(movieTicket);
   });
 });
