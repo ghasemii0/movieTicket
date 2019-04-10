@@ -10,7 +10,7 @@ function MovieTicket(movieName, movieTime, personAge) {
 }
 
 MovieTicket.prototype.ticketInfo = function() {
-  return "You have purchased a ticket for " + this.movieName + " at " + this.movieTime + "." //"Your movie ticket will cost $" + this.moviePrice + ".";
+  return "You have purchased a ticket for " + this.movieName + " at " + this.movieTime + "for" + this.ticket + "."//Your movie ticket will cost $" + this.moviePrice + ".";
 }
 
 // Movie ticket price functions for movie name
@@ -59,6 +59,7 @@ $(document).ready(function() {
     $(".results").show();
     $(".name").text(movieName);
     $(".time").text(movieTime);
+    $(".price").text(movieTicket.ticket);
     console.log(movieTicket);
-  })
+  });
 });
